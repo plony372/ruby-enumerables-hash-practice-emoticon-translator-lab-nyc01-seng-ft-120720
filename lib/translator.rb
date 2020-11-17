@@ -14,8 +14,14 @@ end
 
 
 
-def get_japanese_emoticon(emoticons_file, )
-  # code goes here
+def get_japanese_emoticon(emoticons_file, emotixon)
+for key, value in final_results
+    if value[:english] == emotixon
+        return value[:japanese]
+    elsif value[:japanese] == emotixon
+        return value[:english]
+    end
+    end
 end
 
 def get_english_meaning
