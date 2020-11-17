@@ -1,13 +1,13 @@
 # require modules here
 require "yaml"
 
-def load_library
-
-gov = YAML.load_file('emoticons.yml')
+def load_library(emoticons_file)
+gov = YAML.load_file(emoticons_file)
 
 final_results = gov.each_with_object({}) do |(key, value), final_array|
 final_array[key.to_s] = {:english => value[0], :japanese => value[1]}
 end
+
 return final_results
 end
 
