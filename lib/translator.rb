@@ -8,7 +8,7 @@ gov = YAML.load_file('emoticons.yml')
 final_results = gov.each_with_object({}) do |(key, value), final_array|
 final_array[key.to_s] = {:english => value[0], :japanese => value[1]}
 end
-final_results
+return final_results
 end
 
 
