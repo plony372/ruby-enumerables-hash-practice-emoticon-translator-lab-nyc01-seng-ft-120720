@@ -32,9 +32,9 @@ def get_english_meaning(emotixon_file, emotixon)
   
 for key, value in emotixon_file
     if value[:english] == emotixon
-        return "the caracter you enterd in EG and means '#{key}''"
+        return key
     elsif value[:japanese] == emotixon
-        return "the caracter you enterd is Japanese and it means '#{key}''"
+        return key
     end
     end
 end
