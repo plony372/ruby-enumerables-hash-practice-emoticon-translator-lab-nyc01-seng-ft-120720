@@ -15,7 +15,7 @@ end
 
 
 def get_japanese_emoticon(emoticons_file, emotixon)
-for key, value in final_results
+for key, value in emoticons_file
     if value[:english] == emotixon
         return value[:japanese]
     elsif value[:japanese] == emotixon
@@ -24,6 +24,17 @@ for key, value in final_results
     end
 end
 
-def get_english_meaning
-  # code goes here
+
+
+
+
+def get_english_meaning(emotixon_file, emotixon)
+  
+for key, value in emotixon_file
+    if value[:english] == emotixon
+        return "the caracter you enterd in EG and means '#{key}''"
+    elsif value[:japanese] == emotixon
+        return "the caracter you enterd is Japanese and it means '#{key}''"
+    end
+    end
 end
