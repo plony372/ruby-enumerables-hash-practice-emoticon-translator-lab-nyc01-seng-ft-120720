@@ -21,7 +21,8 @@ for key, value in load_library(emoticons_file)
         return value[:japanese]
     elsif value[:japanese] == emotixon
         return value[:english]
-    else "soory that is not in our dictinery"
+    else 
+      return "soory that is not in our dictinery"
     end
     end
 end
